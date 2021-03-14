@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/style.css" />
+    <title>{{ title }}</title>
+</head>
+<body>
+    <div class="pagewrap">
+        <main>
+            <div class="container boxed">
+                <h1>Sample page</h1>
+                <div>
+                    <form action="" method="POST" novalidate>
+                        {{ form.hidden_tag() }}
+                        <p>
+                            {{ form.select.label}}: {{ form.select }}
+                        </p>
+                        <p>
+                            {{ form.submit(class="btn btn-primary") }} <a href="/" class="btn btn-secondary">I'm feeling lucky!</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+            <div class="container boxed">
+                <p>{{ content }}</p>
+            </div>
+        </main>
+        <footer class="boxed">
+            <p>
+                <a href="https://github.com/bjrnwnklr/">Bjoern Winkler</a>, 2021.
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
