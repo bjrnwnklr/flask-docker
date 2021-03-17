@@ -1,6 +1,13 @@
 from flaskexampleapp import app
 from flaskexampleapp.forms import ExampleForm
-from flask import render_template
+from flask import render_template, jsonify
+
+
+@app.route('/heartbeat')
+def heartbeat():
+    return jsonify({
+        'status': 'healthy'
+    })
 
 
 @app.route('/', methods=['GET', 'POST'])
