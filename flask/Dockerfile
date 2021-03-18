@@ -8,7 +8,7 @@ USER flask-docker
 
 # create a virtual environment and install the requirements into it
 # gunicorn is installed separately as it is not in the local requirements file. We only need it on Docker.
-COPY docker-requirements.txt requirements.txt
+COPY requirements.txt requirements.txt
 RUN python -m venv .venv
 RUN .venv/bin/pip install -r requirements.txt
 RUN .venv/bin/pip install gunicorn
