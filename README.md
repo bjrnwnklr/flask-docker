@@ -3,7 +3,7 @@ Template for simple Flask app, ready to deploy on Docker
 
 # Sources
 
-This template was heavily influenced by the following sources:
+This template was built based on the following sources:
 
 [Miguel Grinberg's Flask Mega tutorial](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world)
 [Flask documentation](https://flask.palletsprojects.com/en/1.1.x/patterns/packages/):
@@ -37,6 +37,20 @@ flask-docker
 ```
 
 ## Files explained
+
+### `.env`
+
+Environment variables used by Flask. 
+
+- Do not upload this to GitHub if cloning / forking this repository as it contains sensitive variables like the secret key. Include in the .gitignore file!
+- For local development, the environment variables in this file can be automatically loaded by installing the `python-dotenv` package.
+- If using Docker, the environment variables can be passed to Docker when running the container with the `docker run [...] --env-file=.env` parameter
+
+The important variables contained in the file are:
+
+- `FLASK_APP=flaskexampleapp`: instructs Flask which application to run when calling `flask run`
+- `FLASK_ENV=development`: sets Flask to development mode with full debugging
+- `SECRET_KEY=secret_key`: the secret key used by the WTForms module against CSRF attacks. Don't publish this key!
 
 # Build and run
 
