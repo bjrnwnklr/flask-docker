@@ -16,6 +16,7 @@ flask-docker
 |   .gitignore
 |   boot.sh
 |   config.py
+|   docker-compose.yml
 |   docker-requirements.txt
 |   Dockerfile
 |   LICENSE
@@ -32,8 +33,11 @@ flask-docker
     +---static
     |       style.css
     |       
-    \---templates
-            index.html
+    +---templates
+    |       index.html
+    |
+    \---tests
+            apitest.py
 ```
 
 ## Files explained
