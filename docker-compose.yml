@@ -3,7 +3,11 @@ version: '3.9'
 services: 
   flask:
     build: ./flask
-    ports:
-      - "5000:5000"
+    expose:
+      - 5000
     env_file: 
       - ./flask/.env
+  nginx:
+    build: ./nginx
+    ports:
+      - 1337:80

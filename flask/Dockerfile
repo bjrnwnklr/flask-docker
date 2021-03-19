@@ -1,4 +1,4 @@
-FROM python:3.9.1
+FROM python:3.9-slim-buster
 
 # create user so we don't run as root, then change into the homedir of the user and switch to the user
 # The rest of the dockerfile will now be run under this user.
